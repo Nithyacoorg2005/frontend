@@ -3,7 +3,6 @@ import './App.css'
 import {  Routes, Route, BrowserRouter} from 'react-router-dom';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
-import Signup from './Signup'
 import Navbar from './Components/Navbar/Navbar';
 import HomePage from './Components/HomePage/HomePage';
 import AudiobooksPage from './Components/AudiobooksPage/AudiobooksPage';
@@ -36,9 +35,9 @@ const App = () => {
      
       
     
-      <Route path="/signup" element={Signup}/>
+      
       <Route path="/main" element={<><Navbar/><HomePage/><Footer/></>}/>
-      <Route path="/" element={<Signup />} />
+     
       <Route path="/genres" element={<><AudiobooksPage/><Footer/></>}/>
       <Route path="/new-releases" element={<><NewReleasePage/><Footer/></>}/>
       <Route path="/classics" element={<><ClassicHorrorPage/><Footer/></>}/>
