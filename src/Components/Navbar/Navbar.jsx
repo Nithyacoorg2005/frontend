@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import './Navbar.css'
 import logo from '../../images/image.png'
-
-import { FaHome, FaBook, FaFilm, FaTv, FaUser, FaPlusCircle } from "react-icons/fa";
+import {Link} from 'react-router-dom'
 
 const Navbar = () => {
   const [hover, setHover] = useState("");
 
-  const handleHover = (item) => setHover(item);
+  const handleHover = (item) => setHover(item); 
 
   const handleLeave = () => setHover("");
 
@@ -23,7 +22,7 @@ const Navbar = () => {
           onMouseLeave={handleLeave}
         >
        
-          <a style={{color:"#fff"}} href="/main">Home</a>
+          <Link to style={{color:"#fff"}} href="/main">Home</Link>
         
         </li>
         <li
@@ -35,9 +34,9 @@ const Navbar = () => {
           Audiobooks
           {hover === "audiobooks" && (
             <div className="subnavbar">
-              <a href="/new-releases">New Releases</a>
+              <Link to="/new-releases">New Releases</Link>
              
-              <a href="/genres">Genres</a>
+              <Link to="/genres">Genres</Link>
             </div>
           )}
         </li>
@@ -50,9 +49,9 @@ const Navbar = () => {
           Horror Movies
           {hover === "movies" && (
             <div className="subnavbar">
-              <a href="/classics">Classics</a>
-              <a href="/modern">Modern</a>
-              <a href="/thrillers">Thrillers</a>
+              <Link to="/classics">Classics</Link>
+              <Link to="/modern">Modern</Link>
+              <Link to="/thrillers">Thrillers</Link>
             </div>
           )}
         </li>
@@ -65,9 +64,9 @@ const Navbar = () => {
           TV Shows
           {hover === "tvshows" && (
             <div className="subnavbar">
-              <a href="/series">Series</a>
-              <a href="/horrorstories">Horror Documentary</a>
-              <a href="/anthologies">Anthologies</a>
+              <Link to="/series">Series</Link>
+              <Link to="/horrorstories">Horror Documentary</Link>
+              <Link to="/anthologies">Anthologies</Link>
             </div>
           )}
         </li>
@@ -80,8 +79,8 @@ const Navbar = () => {
           Podcasts
         {hover === "Podcasts" && (
             <div className="subnavbar">
-        <a style={{color:"#fff"}} href="/podcasts"> Podcasts</a>
-        <a  style={{color:"#fff"}}href="/videopodcasts">Video Podcasts</a>
+        <Link to style={{color:"#fff"}} href="/podcasts"> Podcasts</Link>
+        <Link to style={{color:"#fff"}}href="/videopodcasts">Video Podcasts</Link>
         </div>
         )}
         </li>
